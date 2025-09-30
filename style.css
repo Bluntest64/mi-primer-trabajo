@@ -1,0 +1,280 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.perfil_principal{
+  text-align: center;
+  margin-top: 50px;
+}
+/* Estilos Generales y Resets */
+body {
+    font-family: 'Roboto', sans-serif; /* Usando la fuente de Google Fonts */
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Un fondo claro para el cuerpo */
+    color: #333;
+    line-height: 1.6;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1000px; /* Ancho máximo del contenido */
+    margin: 0 auto; /* Centra el contenedor */
+    padding: 0 20px; /* Espaciado a los lados */
+}
+
+/* Header */
+.main-header {
+    background-color: #1a1a1a; /* Fondo oscuro como en la imagen */
+    color: #fff;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.section-block h1{
+    margin-bottom: 20px;
+}
+.header-content {
+    display: flex;
+    justify-content: space-between; /* Título a la izquierda, navegación a la derecha */
+    align-items: center;
+}
+
+.site-title {
+    margin: 0;
+    font-size: 1.8em;
+    font-weight: 700;
+}
+
+/* Navegación */
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Para que los enlaces estén en línea */
+}
+
+.main-nav ul li {
+    margin-left: 25px; /* Espacio entre los enlaces */
+}
+
+.main-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.main-nav ul li a:hover {
+    color: #007bff; /* Color al pasar el ratón */
+}
+
+/* Contenido Principal */
+.main-content {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.section-block {
+    background-color: #fff;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.section-block h2 {
+    color: #1a1a1a;
+    font-size: 2em;
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #eee; /* Línea debajo del título */
+    padding-bottom: 10px;
+}
+
+/* Sección "Acerca de mí" */
+.imagen_principal {
+    text-align: center; /* Centra la imagen */
+    margin-top: 30px;
+}
+
+.imagen_principal img {
+    max-width: 60%; /* Ajusta el tamaño de la imagen principal */
+    height: auto;
+    border-radius: 8px; /* Bordes ligeramente redondeados */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Galería */
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las imágenes salten de línea en pantallas pequeñas */
+    gap: 20px; /* Espacio entre las imágenes */
+    justify-content: center; /* Centra las imágenes si no llenan una fila */
+    margin-top: 20px;
+}
+
+.galeria_perfiles {
+    flex: 1 1 calc(33.333% - 20px); /* Tres columnas con espacio */
+    max-width: calc(33% - 30px); /* Asegura que no se estiren demasiado */
+    box-sizing: border-box; /* Incluye padding y border en el ancho */
+    overflow: hidden; /* Para que la imagen no se salga del contenedor */
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.galeria_perfiles:hover {
+    transform: translateY(-5px); /* Efecto al pasar el ratón */
+}
+
+.galeria_perfiles img {
+    width: 100%;
+    height: 210px; /* Altura fija para las imágenes de la galería */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+    display: block; /* Elimina el espacio extra debajo de la imagen */
+}
+.galeria_perfiles h4{
+    text-align: center;
+}
+
+/* Footer (si lo incluyes) */
+.main-footer {
+    background-color: #1a1a1a;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column; /* Apila el título y la navegación */
+        text-align: center;
+    }
+
+    .main-nav ul {
+        margin-top: 15px;
+        justify-content: center; /* Centra los enlaces */
+    }
+
+    .main-nav ul li {
+        margin: 0 10px; /* Ajusta el espacio entre enlaces */
+    }
+
+    .site-title {
+        font-size: 1.5em;
+    }
+
+    .section-block h2 {
+        font-size: 1.8em;
+    }
+
+    .imagen_principal img {
+        max-width: 80%; /* Más grande en pantallas medianas */
+    }
+
+    .galeria_perfiles {
+        flex: 1 1 calc(50% - 20px); /* Dos columnas en pantallas medianas */
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .main-nav ul {
+        flex-direction: column; /* Apila los enlaces en pantallas pequeñas */
+        align-items: center;
+    }
+
+    .main-nav ul li {
+        margin: 5px 0; /* Espacio vertical entre enlaces */
+    }
+
+    .imagen_principal img {
+        max-width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
+    }
+
+    .galeria_perfiles {
+        flex: 1 1 100%; /* Una columna en pantallas muy pequeñas */
+        max-width: 100%;
+    }
+}
+/* Estilos generales del formulario */
+.contacto {
+  max-width: 500px;      /* Ancho máximo del formulario */
+  margin: 40px auto;     /* Centrado horizontal y espacio arriba */
+  padding: 30px;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+}
+
+/* Título del formulario */
+.contacto h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+/* Estilos de los labels */
+.contacto label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+/* Inputs y textarea */
+.contacto input[type="text"],
+.contacto input[type="email"],
+.contacto textarea {
+  width: 100%;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+/* Efecto al enfocar los campos */
+.contacto input[type="text"]:focus,
+.contacto input[type="email"]:focus,
+.contacto textarea:focus {
+  border-color: #6c63ff;
+  box-shadow: 0 0 5px rgba(108, 99, 255, 0.3);
+  outline: none;
+}
+
+/* Botón enviar */
+.contacto button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background-color: #6c63ff;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contacto button:hover {
+  background-color: #574fd6;
+}
+
+/* Mensaje de envío */
+#formMsg {
+  margin-top: 15px;
+  text-align: center;
+  font-weight: bold;
+  color: green;
+}

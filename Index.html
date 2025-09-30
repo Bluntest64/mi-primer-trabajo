@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Página Personal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="main-header">
+    <div class="container header-content">
+      <h1 class="site-title">Mi Página Personal</h1>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#acerca-de-mi">Acerca de mí</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="botones">
+    <button onclick="mostrarSeccion('seccion1')">Sección 1</button>
+    <button onclick="mostrarSeccion('seccion2')">Sección 2</button>
+    <button onclick="mostrarSeccion('seccion3')">Sección 3</button>
+  </div>
+  <main class="main-content container">
+    <!-- Inicio -->
+    <section id="Inicio" class="section-block">
+      <h2>Descripcion rapida</h2>
+      <p>
+        Mi nombre es Kevin, esta es una pagina que fue creada con la intención
+        de que me conoscan más a detalle o que sepan de mi, vayan a las
+        opciones para lo que les interese conocer de mi
+      </p>
+      <div class="perfil_principal">
+        <h4>Perfil principal</h4>
+      </div>
+      <div class="imagen_principal">
+        <img src="img/WhatsApp.png" alt="Perfil de WhatsApp" />
+        <h4>Whatsapp</h4>
+      </div>
+    </section>
+
+    <!-- Acerca de mi -->
+    <section id="acerca_de_mi" class="section-block">
+      <h1>Acerca de mi</h1>
+      Mi nombre completo es Kevin David Gómez Posada, tengo 18 años de edad,
+      vivo en sabanalarga
+      <h3>Gustos</h3>
+      <ul>
+        <li>
+          Me gusta la programación, la idea de poder crear y plasmar en
+          digital mis ideas y pensamientos es agradable, a pesar de que
+          tambien da flojerita si se hace demasiado
+        </li>
+        <li>
+          Me gustan los videojuegos, mundos llenos de historias que pueden
+          traer cualquier cosa menos algo que tu esperes, los juegos que
+          prefiero son aquellos con transfondo y una historia atrapante e
+          interesante
+        </li>
+        <li>
+          Me gustan demasiados tipos de musica, aunque no me agradan mucho los
+          generos musicales de pueblos, casi ni me acuerdo de los productores
+          ya que no es que escuche la musica de un cantante especificamente,
+          si es buena me la quedo y si no la paso, aunque si tengo algunos
+          cantantes y grupos que me gustan
+        </li>
+        <li>
+          Me gustan bastante las peliculas ya sean animadas o live action, mis
+          sagas favoritas son la de Harry potter Piratas del caribe, la
+          trilogia de mi villano favorito (lo cuatro no es buena), la trilogia
+          de kung fu panda (lo mismo que el anterior), la saga de rapidos y
+          furiosos.
+        </li>
+        <li>
+          Me gustan mucho las caricaturas y el anime, clasicos como Hora de
+          Aventura, Un Show más hasta caricaturas mas de culto como más allá
+          del jardín y el tren infinito que tocan temas mas serios, anime
+          clasico como Inazuma Eleven y Caballeros del Zodiaco hasta animes
+          mas serios como takopi no ganzai o Angel de la muerte y death note.
+        </li>
+        <img src="" alt="">
+        <li>
+          Me encanta el sabor acido, e comido mangos tan verdes que terminaba
+          mordiendo por accidente la semilla que por lo verde estaba
+          totalmente suave, solo para que sepan, no sabe nada bien, tambien e
+          comido limones con la cascara solo porque se arracaban junto con el
+          interior, con tal de sentir el maximo sabor acido llegé a mezclar
+          limon carambolo y maraculla sin agua, creo que la mayor parte del
+          acido solo fue por el limon.
+        </li>
+      </ul>
+    </section>
+
+    <!-- Proyectos -->
+    <section id="proyectos" class="section-block">
+      <h1>Proyectos</h1>
+      Tengo un proyecto en marcha el cual estoy realizando en el sitio web
+      google colab, alli estoy haciendo una historia interactiva, me e
+      mantenido muy ocupado asi que lo e tenido agarrando polvo, aunque, estoy
+      seguro de que no falta mucho para que lo retome y lo traiga a esta
+      pagina, asi que estoy seguro de que lo traere algun dia... si, alun dia.
+      <br />
+      Estoy haciendo tambien una pagina web dedicada a un personaje, esa es la
+      mas reciente, Tengo varios proyectos mas debo aprender mas para
+      desarrollarlos bien, se ira actualizando a la pagina con el tiempo
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="section-block">
+      <h1>Mis perfiles</h1>
+      <h3>Perfiles secundarios</h3>
+      <div class="gallery-container">
+        <div class="galeria_perfiles">
+          <img src="img/Facebook.jpeg" alt="Perfil de Facebook" />
+          <h4>Facebook</h4>
+        </div>
+        <div class="galeria_perfiles">
+          <img src="img/TikTok.jpeg" alt="Perfil de TikTok" />
+          <h4>Tik Tok</h4>
+        </div>
+        <div class="galeria_perfiles">
+          <img src="img/Discord.png" alt="Perfil de Discord" />
+          <h4>Discord</h4>
+        </div>
+        <div>
+          <section class="contacto">
+            <h2>Contacto</h2>
+            <form id="contactForm">
+              <label for="nombre">Nombre:</label>
+              <input type="text" id="nombre" name="nombre" required>
+
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
+
+              <label for="mensaje">Mensaje:</label>
+              <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+              <button type="submit">Enviar</button>
+            </form>
+            <p id="formMsg"></p>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script>
+    function mostrarSeccion(seccionId) {
+      // Ocultar todas las secciones
+      const secciones = document.querySelectorAll(".contenido");
+      secciones.forEach((seccion) => {
+        seccion.style.display = "none";
+      });
+
+      // Mostrar solo la sección seleccionada
+      document.getElementById(seccionId).style.display = "block";
+    }
+  </script>
+</body>
+
+</html>
